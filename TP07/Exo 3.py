@@ -1,4 +1,5 @@
 from Exo2 import *
+# Executer le fichier avec ctrl+maj+E
 ## 2.
 def mesures():
     L = []
