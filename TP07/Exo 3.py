@@ -5,7 +5,7 @@ def mesures():
     L = []
     fichier = open("tensions.txt", 'r')
     for ligne in fichier:
-        L.append(float(fichier.readline()))
+        L.append(float(ligne))
     fichier.close()
     return L
 
