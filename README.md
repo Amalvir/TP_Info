@@ -1,3 +1,5 @@
 # TP_Info
-Mes TP d'info.
-Ceux de MLong sont dans correction.
+
+Ce sont mes TPs d'infos donc pas des réferences.
+
+Par contre ceux de MLong sont dans correction.

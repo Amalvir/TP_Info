@@ -1,10 +1,11 @@
 from Exo2 import *
+# Executer le fichier avec ctrl+maj+E
 ## 2.
 def mesures():
     L = []
     fichier = open("tensions.txt", 'r')
     for ligne in fichier:
-        L.append(float(fichier.readline()))
+        L.append(float(ligne))
     fichier.close()
     return L
 
