@@ -26,8 +26,10 @@ def affiche_grille(grille):
 
 def num_carre(i, j):
     a = i // 3
-    b = j
-    return a
+
+    t = a+b
+    return t
 
 for i in range(0, 9):
-    print(num_carre(i, 0))
+    for j in range(0, 9):
+        print(num_carre(i, j))

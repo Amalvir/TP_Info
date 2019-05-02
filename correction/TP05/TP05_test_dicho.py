@@ -1,9 +1,9 @@
-    def dichotomie(x, L):
+def dichotomie(x, L):
     '''Recherche par dichotomie de x dans la liste L triée par ordre croissant'''
     n = len(L)
     g = 0 # indice de début de recherche
     d = n-1 # indice de fin de recherche
-    # Tant qu'il y a des éléments dans la 
+    # Tant qu'il y a des éléments dans la
     # portion de liste considérée
     while d >= g:
         m = (g+d)//2
