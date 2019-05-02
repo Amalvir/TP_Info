@@ -38,13 +38,18 @@ def case_carre(n, k):
 
 
 def est_complete(grille):
-    for i in grille:
-        try:
-            i.index(0)
-        except ValueError:
-            return False
+    # Correction d'Izi incomplète :
+    n = len(grille)
+    lcl = [[0]*9 for i in range(9)]     # Liste 9 entiers compteur ligne i
+    lcc = [[0]*9 for i in range(9)]     # Liste 9 entiers compteur colonne j
+    lcpc = [[0]*9 for i in range(9)]    # Liste 9 entiers compteur petit carré
 
-
-
-
-print(est_complete(liste2))
+    for i in range(n):
+        for j in range(n):
+            x = grille[i][j] - 1
+            if x == -1:
+                return False
+            lcl[i][x] += 1
+            lcc[j][x] += 1
+            k = num_carre(i, j)
+            lcpc[k][x] += 1
