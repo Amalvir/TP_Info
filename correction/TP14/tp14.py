@@ -91,7 +91,7 @@ def cotan(x):
     return np.cos(x)/np.sin(x)
     
 X = np.linspace(np.pi/2, 50*np.pi, 1001)
-Y = [cotan(x)  for x in X]
+Y = [cotan(x) for x in X]
 
 import matplotlib.pyplot as plt
 plt.plot(X, Y)

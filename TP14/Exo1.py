@@ -5,12 +5,10 @@ def newton(f, fprime, u0, eps):
     """Méthode de Newton vu en cours"""
     u = u0  # u = u0
     v = u - f(u)/fprime(u)  # u = u1
-    count = 1
 
     while abs(v - u) > eps:
         u = v
         v = v - f(v)/fprime(v)
-        count += 1
     return v
 
 
@@ -37,8 +35,8 @@ def gprime(x):
     return 3*x**2 - 1
 
 
-u0 = 3**-1/3
-print(newton(g, gprime, u0, 0.001))
+u0 = 3**(1/2)/3
+# print(newton(g, gprime, u0, 0.001))  # Entraine une division par 0
 
 u0 = u0 + 0.001
 print(newton(g, gprime, u0, 0.001))
@@ -46,9 +44,9 @@ print(newton(g, gprime, u0, 0.001))
 u0 = u0 - 0.002
 print(newton(g, gprime, u0, 0.001))
 
-u0 = 3**-1/3 - 0.3
+u0 = 3**(1/2)/3 - 0.3
 print(newton(g, gprime, u0, 0.001), '\n')
-# On est proche du point ou la derivée s'annule donc Newton merde.
+# Division par 0 et proche des erreurs par newton
 
 # A.3
 
