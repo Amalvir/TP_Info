@@ -83,3 +83,18 @@ print(newton_compteur(f, fprime, 2, 10, 0.01), newton_derivee(f, 2, 10, 0.01, 0.
 import scipy.optimize as sco
 
 print(sco.newton(f, 2, fprime=fprime, tol=0.001, maxiter=10))
+
+## Exercice 2
+import numpy as np
+
+def cotan(x):
+    return np.cos(x)/np.sin(x)
+    
+X = np.linspace(np.pi/2, 50*np.pi, 1001)
+Y = [cotan(x)  for x in X]
+
+import matplotlib.pyplot as plt
+plt.plot(X, Y)
+
+plt.show()
+
