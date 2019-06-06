@@ -1,0 +1,20 @@
+## 2.1
+
+3. C'est le champ PRIMARY KEY qui détermine la clé primaire et c'est id à chaque fois.
+
+5. idStation de utilisation sert à rien car les véhicules retournent dans la même station.
+
+## 2.2
+
+1. SELECT nom, prénom FROM abonnés;
+   SELECT nom, prénom FROM abonnés ORDER BY nom ASC;
+
+2. SELECT nom, prénom FROM abonnés WHERE code_postal=69008 ORDER BY nom ASC;
+   SELECT nom, prénom FROM abonnés WHERE code_postal=69008 AND sexe='F' ORDER BY nom ASC;
+
+3. SELECT sexe, COUNT(*) AS nb FROM abonnés GROUP BY sexe
+4. SELECT code_postal, COUNT(*) AS nb FROM abonnés WHERE code_postal LIKE "69%" GROUP BY code_postal
+
+## 2.3
+
+1. 

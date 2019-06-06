@@ -16,8 +16,7 @@ SELECT * FROM etab_sco WHERE denomination_principale = "COLLEGE" OR denomination
 La on a tout
 5. Renvoie les collège dont le patronyme est "SAINT EXUPERY"
 6. Renvoie le nombre de lycée généraux, le nombre de college et le nombre de college privé.
-7. SELECT denomination_principale ,COUNT(*) as nb FROM etab_sco
-GROUP BY denomination_principale;
+7. SELECT COUNT(DISTINCT(denomination_principale)) FROM etab_sco;
 
 ### 3.
 
