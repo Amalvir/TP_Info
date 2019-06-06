@@ -21,4 +21,5 @@ GROUP BY denomination_principale;
 
 ### 3.
 
-
+2.
+(c) Le type de ces variables est 'list'. abscisses[1] = (882408.3,)
