@@ -1,0 +1,24 @@
+## 2.1
+1. CREATE
+3. 67201
+
+1. La première colonne est les id. On est sr qu'ils sont unique.
+2. 0010010F	Lycée général et technologique du Bugey	LYCEE GENERAL ET TECHNOLOGIQUE	DU BUGEY	909000.3	6521524.2
+3. L'ensemble des établissements d'enseignement en France
+
+## 2.2
+1. Renvoie les colonnes 'numero' et 'appellation_officielle' d'etab_sco
+2. SELECT patronyme, appellation_officielle FROM etab_sco;
+3. Projette toutes les lignes où "SAINT JOSEPH" est le patronyme
+4. SELECT * FROM etab_sco WHERE denomination_principale = "COLLEGE";
+Il manque les collèges privés.
+SELECT * FROM etab_sco WHERE denomination_principale = "COLLEGE" OR denomination_principale = "COLLEGE PRIVE";
+La on a tout
+5. Renvoie les collège dont le patronyme est "SAINT EXUPERY"
+6. Renvoie le nombre de lycée généraux, le nombre de college et le nombre de college privé.
+7. SELECT denomination_principale ,COUNT(*) as nb FROM etab_sco
+GROUP BY denomination_principale;
+
+### 3.
+
+
