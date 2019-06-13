@@ -17,4 +17,48 @@
 
 ## 2.3
 
-1. 
+1. SELECT véhicule, stations.nom FROM véhicules JOIN stations ON idStation=stations.id;
+   SELECT véhicule, stations.nom FROM véhicules JOIN stations ON idStation=stations.id ORDER BY nom ASC;
+
+2. SELECT id FROM stations WHERE nom="Ambroise Courtois";
+   SELECT nom, prénom FROM utilisations JOIN abonnés ON idAbonné=abonnés.id WHERE idStation=2
+
+3. SELECT nom, prénom FROM utilisations JOIN abonnés ON idAbonné=abonnés.id WHERE idStation=1;
+
+4. SELECT SUM(km), SUM(jours), SUM(tarif) FROM utilisations JOIN véhicules ON idVéhicule=véhicules.id WHERE véhicule="VC-568-LK"
+
+5. SELECT début, fin, véhicule, abonnés.nom, prénom
+   FROM (utilisations JOIN véhicules ON idVéhicule=véhicules.id)
+   JOIN abonnés ON idAbonné=abonnés.id
+
+6. SELECT abonnés.nom, prénom
+   FROM (utilisations JOIN véhicules ON idVéhicule=véhicules.id)
+   JOIN abonnés ON idAbonné=abonnés.id
+   WHERE véhicule="CK-047-LC"
+
+7. SELECT abonnés.nom, prénom
+   FROM (utilisations JOIN stations ON idStation=stations.id)
+   JOIN abonnés ON idAbonné=abonnés.id
+   WHERE stations.nom="Gare Perrache"
+
+8. SELECT COUNT(*), SUM(jours), SUM(km)
+   FROM utilisations JOIN abonnés ON idAbonné=abonnés.id
+   WHERE sexe="F"
+
+9. SELECT abonnés.nom, prénom, SUM(tarif)
+   FROM utilisations JOIN abonnés ON idAbonné=abonnés.id
+   GROUP BY nom
+
+10. SELECT nom, COUNT(*), SUM(jours)
+    FROM utilisations JOIN stations ON idStation=stations.id
+    GROUP BY nom
+
+11. SELECT nom, AVG(km)
+    FROM utilisations JOIN stations ON idStation=stations.id
+    GROUP BY nom
+    ORDER BY AVG(km) DESC
+
+12. SELECT nom, SUM(km)/SUM(jours) AS moy
+    FROM utilisations JOIN stations ON idStation=stations.id
+    GROUP BY nom
+    ORDER BY moy DESC
