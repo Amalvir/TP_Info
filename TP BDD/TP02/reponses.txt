@@ -47,7 +47,8 @@
 
 9. SELECT abonnés.nom, prénom, SUM(tarif)
    FROM utilisations JOIN abonnés ON idAbonné=abonnés.id
-   GROUP BY nom
+   GROUP BY abonnés.nom
+   ORDER BY tarif DESC
 
 10. SELECT nom, COUNT(*), SUM(jours)
     FROM utilisations JOIN stations ON idStation=stations.id
