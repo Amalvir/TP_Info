@@ -36,7 +36,7 @@
    JOIN abonnés ON idAbonné=abonnés.id
    WHERE véhicule="CK-047-LC"
 
-7. SELECT abonnés.nom, prénom
+7. SELECT abonnés.nom, prénom, début, fin
    FROM (utilisations JOIN stations ON idStation=stations.id)
    JOIN abonnés ON idAbonné=abonnés.id
    WHERE stations.nom="Gare Perrache"

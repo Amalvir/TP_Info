@@ -20,5 +20,3 @@ def Fpendule(u,t):
 
 
 les_t = np.linspace(0, 1, 1000)
-les_u = odeint(Fpendule, 
-    
