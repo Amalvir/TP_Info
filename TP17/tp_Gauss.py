@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import division # si Python 2
+import numpy as np
+import matplotlib.pyplot as plt
 
 # Fichier initial pour le TP 17 : Pivot de Gauss
 
@@ -138,4 +140,38 @@ def Gauss(A0, B0):
 
 
 A1 = [[2, 2, -3], [-2, -2, -3], [6, 4, 4]]
-B0 = [[15], [-1], [8]]
+B1 = [[15], [-1], [8]]
+
+# # Exo 4
+
+# print(np.linalg.solve(A1, B1))
+
+
+# # Exo 5
+Text = 300
+L = 1
+alpha = 40
+n = 10
+def matrice_A(n):
+    A = [[0 for i in range(n)] for j in range(n)]
+    for i in range(n):
+        A[i][i] = -2
+    for i in range(n-1):
+        A[i][i+1] = 1
+        A[i+1][i] = 1
+    return A
+
+
+def matrice_B(n):
+    h = L/(n+1)
+    B = [[-h**2*alpha] for i in range(n)]
+    B[0][0] = B[0][0] - Text
+    B[n-1][0] = B[n-1][0] - Text
+    return B
+
+
+les_T = Gauss(matrice_A(n), matrice_B(n))
+les_X = np.linspace(0, L, 200)
+
+plt.plot(les_X, les_T)
+plt.show()
